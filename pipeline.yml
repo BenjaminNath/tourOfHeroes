@@ -13,12 +13,21 @@ resources:
     organization: bazaz-demo
     space: dev
     skip_cert_check: true
-    
+
 jobs:
 - name: deploy-test-api
   plan: 
   - get: test-api
     trigger: true
+  - task: compile-angular
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run: 
+        path: echo
+        args: [hello world]
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
