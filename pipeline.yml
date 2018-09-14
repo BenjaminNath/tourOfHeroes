@@ -1,0 +1,21 @@
+resources: 
+- name: heroes-api
+  type: git
+  source: 
+    uri: https://github.com/BenjaminNath/tourOfHeroes
+    branch: master
+# - name: bazaz-demo-cf
+#   type: cf
+#   source: 
+#     api: https://api.sys.gn01.pcf.dcsg.com
+#     username: ((cf_user_nonprod))
+#     password: ((cf_password_nonprod))
+#     organization: bazaz-demo
+#     space: dev
+#     skip_cert_check: true
+
+jobs:
+- name: deploy-test-api
+  plan: 
+  - get: test-api
+    trigger: true;
