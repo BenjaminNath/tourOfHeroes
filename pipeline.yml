@@ -23,8 +23,7 @@ jobs:
     config:
       platform: linux
       run: 
-        path: cp
-        args: [manifest.yml dist/]
+        path: pwd && ls
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
