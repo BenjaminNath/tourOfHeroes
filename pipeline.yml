@@ -16,7 +16,7 @@ resources:
 
 jobs:
 - name: deploy-test-api
-  plan: 
+  plan:
   - get: test-api
     trigger: true
   - put: bazaz-demo-cf
