@@ -2,3 +2,5 @@
 applications:
 - name: bensHeroes
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  command: ng build
+  path: dist
