@@ -2,4 +2,3 @@
 applications:
 - name: bensHeroes
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
-  path: dist
