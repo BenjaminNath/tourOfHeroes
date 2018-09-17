@@ -23,7 +23,8 @@ jobs:
     config:
       platform: linux
       run: 
-        path: cp manifset.yml dist/
+        path: cp
+        args: [manifest.yml dist/]
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
