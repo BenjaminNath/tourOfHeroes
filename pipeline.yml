@@ -22,8 +22,11 @@ jobs:
   - task: move-manifest
     config:
       platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
       run: 
-        path: pwd && ls
+        path: ls
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
