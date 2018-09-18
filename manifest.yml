@@ -3,4 +3,4 @@ applications:
 - name: bensHeroes
   buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
   command: $HOME/boot.sh
-  path: angular-tour-of-heros/dist
+  path: bensHeroes/dist
