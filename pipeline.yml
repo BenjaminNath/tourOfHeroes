@@ -14,7 +14,24 @@ resources:
     space: dev
     skip_cert_check: true
 
+
 jobs:
+- name: test
+  plan:
+  - get: test-api
+    trigger: true
+  - task: run-test
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: node}
+      inputs:
+      - name: test-api
+      outputs:
+      - name: test-output
+      run:
+        path: ./test-api/shellScripts/runTests.sh
 - name: build-and-deploy
   plan: 
   - get: test-api
