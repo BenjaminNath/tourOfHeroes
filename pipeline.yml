@@ -15,11 +15,11 @@ resources:
     skip_cert_check: true
 
 jobs:
-- name: deploy-test-api
+- name: build-and-deploy
   plan: 
   - get: test-api
     trigger: true
-  - task: move-manifest
+  - task: build
     config:
       platform: linux
       image_resource:
@@ -27,9 +27,11 @@ jobs:
         source: {repository: node}
       inputs:
       - name: test-api
+      outputs:
+      - name: compiledHeroes
       run:
         path: ./test-api/shellScripts/testing_shell.sh
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
-      path: test-api/
+      path: test-api/dist/
