@@ -1,1 +1,3 @@
-echo 'hello world'
+#! ./bin/sh
+
+echo 'ben you dumb bitch'

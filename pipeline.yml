@@ -24,7 +24,9 @@ jobs:
       platform: linux
       image_resource:
         type: docker-image
-        source: {repository: busybox}
+        source: {repository: node}
+      inputs:
+      - name: test-api
       run:
         path: ./test-api/shellScripts/testing_shell.sh
   - put: bazaz-demo-cf
