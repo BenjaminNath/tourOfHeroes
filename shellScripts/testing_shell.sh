@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd angular-tour-of-heroes
+cd test-api
 npm install
 echo "building tour of heroes"
 npm run build:production
