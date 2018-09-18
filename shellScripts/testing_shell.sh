@@ -9,4 +9,4 @@ pwd
 echo "here's the files in this path"
 ls -a
 echo "here's the stuff in compiledheroes"
-ls -a ../compiledheroes
+ls -a ../compiledHeroes
