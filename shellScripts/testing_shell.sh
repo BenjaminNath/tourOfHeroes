@@ -8,5 +8,5 @@ echo "App has finished building. here's the current path"
 pwd
 echo "here's the files in this path"
 ls -a
-echo "here's the stuff in the above directory"
-ls -a ../
+echo "here's the stuff in compiledheroes"
+ls -a ../compiledheroes
