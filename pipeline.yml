@@ -34,4 +34,4 @@ jobs:
   - put: bazaz-demo-cf
     params:
       manifest: test-api/manifest.yml
-      path: compiledHeroes
+      path: compiledHeroes/
