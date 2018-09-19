@@ -12,3 +12,10 @@ describe('blank App', () => {
     expect(page.getParagraphText()).toEqual('Tour of Heroes');
   });
 });
+
+describe('Hero Values', () => {
+  it('failing test', () => {
+
+    expect().toEqual(4);
+  })
+})
