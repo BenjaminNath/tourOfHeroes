@@ -29,8 +29,6 @@ jobs:
         source: {repository: node}
       inputs:
       - name: test-api
-      outputs:
-      - name: test-output
       run:
         path: ./test-api/shellScripts/runTests.sh
 
