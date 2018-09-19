@@ -18,6 +18,7 @@ resources:
 
 jobs:
 - name: karma-tests
+  serial: true
   plan:
   - get: test-api
     trigger: true
@@ -33,6 +34,7 @@ jobs:
         path: ./test-api/shellScripts/runTests.sh
 
 - name: build-and-deploy
+  serial: true
   plan: 
   - get: test-api
     trigger: true
