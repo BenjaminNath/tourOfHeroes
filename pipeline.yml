@@ -27,7 +27,7 @@ jobs:
       platform: linux
       image_resource:
         type: docker-image
-        source: {repository: node}
+        source: weboaks/node-karma-protractor-chrome
       inputs:
       - name: test-api
       run:

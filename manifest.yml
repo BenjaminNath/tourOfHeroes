@@ -1,5 +1,5 @@
 ---
 applications:
 - name: bensHeroes
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  buildpack: nodejs_buildpack
   command: $HOME/boot.sh
